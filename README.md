@@ -14,21 +14,25 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Premise
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In our data grid users can change the days of the week a current line would air on. What we would like to see is how you would handle this particular request.
 
-## Learn More
+# Scope
+The function should be able to handle the following.
+Accept days in the following formats
+m,t,w,th,f,s,su
+mon, tue, etc
+monday, tuesday, etc
+The event should not be case sensitive
+A dash (-) should be allowed for consecutive days (m-w = Monday, Tuesday,  Wednesday)
+Commas would allow individual days (th,s,su = Thursday, Saturday Sunday)
+The dash and comma can be combined (m-w,s,su = Monday, Tuesday, Wednesday, Saturday, Sunday)
+The function should return numbers to represent the days Sunday being 1 and Saturday being 7
+It should not matter what order the days, dashes or commas are in. (th,m-w,su)
 
-To learn more about Next.js, take a look at the following resources:
+# Result
+A front end UI was built to display a data grid where a user can enter days of the week in the mentioned formats and see a list of numbers corresponding with the entered days.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Testing
+Jest was used for testing purposes. The testing suite can be run on your local machine with a 'yarn test' (or whatever package manager you use).

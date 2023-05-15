@@ -10,6 +10,7 @@ const FooterContainer = styled.footer`
 
 type FooterProps = {
   companyName: string;
+  isMobile: boolean;
 };
 
 const Footer: React.FC<FooterProps> = ({ companyName }) => {

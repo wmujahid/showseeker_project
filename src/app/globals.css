@@ -2,14 +2,4 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(242,251,255);
 }
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-}
 
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}

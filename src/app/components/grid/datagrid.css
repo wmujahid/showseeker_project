@@ -58,14 +58,19 @@ tr:nth-child(even) td {
   background: #e8e8e8;
 }
 
-input{
+input {
   border: none;
   background: transparent;
   border-bottom: 1px solid #fff;
   outline: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* Styles for mobile devices */
+@media only screen and (max-width: 400px) {
+  table.mobile {
+    grid-template-columns: 1fr;
+  }
+
   th,
   td {
     display: block;

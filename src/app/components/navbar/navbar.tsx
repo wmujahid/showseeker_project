@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import sslogo from 'public/sslogo.svg';
+import sslogo from 'public/sslogo2.svg';
 
 
 const NavbarContainer = styled.nav`
@@ -17,9 +17,14 @@ const NavbarContainer = styled.nav`
 
 const MenuList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style: none;
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -28,6 +33,7 @@ const MenuItem = styled.li`
 
 type NavbarProps = {
   menuItems: string[];
+  isMobile: boolean;
 };
 
 const Navbar: React.FC<NavbarProps> = ({ menuItems }) => {
